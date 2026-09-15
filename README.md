@@ -1,1 +1,1 @@
-# my-product-landing
+# lantern.path
