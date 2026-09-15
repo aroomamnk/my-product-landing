@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lantern Path — Academic & Admissions Mentoring</title>
+<meta name="description" content="Confidential academic and admissions support for students applying worldwide: manuscript and statistics support, admissions strategy, and interview and language coaching." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          midnight: '#101826',
+          navy: '#1B2740',
+          gold: '#E8A33D',
+          parchment: '#F4EFE3',
+          ink: '#16233A',
+          muted: '#8A8371',
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['"IBM Plex Sans"', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+
+<style>
+  /* Connector line for the "How it works" sequence — hidden below md, and
+     respects reduced-motion preferences for its reveal animation. */
+  .step-line::before {
+    content: "";
+    position: absolute;
+    top: 1.25rem;
+    left: 100%;
+    width: 3rem;
+    height: 1px;
+    background: rgba(232, 163, 61, 0.4);
+  }
+  .step-item:last-child .step-line::before { display: none; }
+  @media (max-width: 767px) {
+    .step-line::before { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  ::selection { background: #E8A33D; color: #101826; }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #E8A33D;
+    outline-offset: 2px;
+  }
+</style>
+</head>
+
+<body class="bg-parchment text-ink font-sans antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 z-50 bg-midnight text-parchment">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+    <a href="#" class="font-serif text-xl tracking-tight">Lantern Path</a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm text-parchment/80">
+      <a href="#research" class="hover:text-parchment transition-colors">Research &amp; Analytics</a>
+      <a href="#admissions" class="hover:text-parchment transition-colors">Admissions Studio</a>
+      <a href="#coaching" class="hover:text-parchment transition-colors">Interview &amp; Language Lab</a>
+      <a href="#bundles" class="hover:text-parchment transition-colors">Bundles &amp; Pricing</a>
+    </nav>
+
+    <a href="#intake" class="hidden md:inline-block bg-gold text-midnight text-sm font-medium px-4 py-2 rounded-sm hover:bg-gold/90 transition-colors">
+      Get Started
+    </a>
+
+    <button id="menuBtn" class="md:hidden text-parchment" aria-label="Open menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t border-parchment/10 px-6 py-4 flex flex-col gap-4 text-sm">
+    <a href="#research">Research &amp; Analytics</a>
+    <a href="#admissions">Admissions Studio</a>
+    <a href="#coaching">Interview &amp; Language Lab</a>
+    <a href="#bundles">Bundles &amp; Pricing</a>
+    <a href="#intake" class="bg-gold text-midnight font-medium px-4 py-2 rounded-sm text-center">Get Started</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="bg-midnight text-parchment">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-20 md:py-28 grid md:grid-cols-5 gap-12 items-center">
+
+    <div class="md:col-span-3">
+      <span class="inline-block text-sm text-gold border border-gold/40 rounded-full px-3 py-1 mb-6">
+        High-impact academic &amp; admissions support, worldwide
+      </span>
+
+      <h1 class="font-serif text-4xl md:text-5xl leading-[1.1] mb-6">
+        Accelerate your academic journey, from first application to final acceptance.
+      </h1>
+
+      <p class="text-parchment/75 text-lg leading-relaxed mb-10 max-w-xl">
+        Precision statistical support, submission-ready formatting, bespoke admission dossiers,
+        and realistic interview simulations — refined through rigorous human review.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-14">
+        <a href="#bundles" class="bg-gold text-midnight font-medium px-6 py-3 rounded-sm hover:bg-gold/90 transition-colors">
+          Explore packages
+        </a>
+        <a href="#intake" class="border border-parchment/30 px-6 py-3 rounded-sm hover:border-parchment/60 transition-colors">
+          Book a free 15-min call
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-parchment/70">
+        <div class="flex items-start gap-2">
+          <svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#E8A33D" stroke-width="1.8"><path d="M3 8.5l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Confidential, under NDA
+        </div>
+        <div class="flex items-start gap-2">
+          <svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#E8A33D" stroke-width="1.8"><path d="M3 8.5l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          GDPR compliant
+        </div>
+        <div class="flex items-start gap-2">
+          <svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#E8A33D" stroke-width="1.8"><path d="M3 8.5l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          APA 7th &amp; international journal standards
+        </div>
+      </div>
+    </div>
+
+    <!-- simple lantern-path motif: nodes on a rising line -->
+    <div class="md:col-span-2 hidden md:block" aria-hidden="true">
+      <svg viewBox="0 0 320 260" class="w-full h-auto">
+        <path d="M20 220 C 90 220, 90 140, 160 140 S 230 60, 300 60" stroke="rgba(232,163,61,0.35)" stroke-width="1.5" fill="none"/>
+        <circle cx="20" cy="220" r="5" fill="#E8A33D"/>
+        <circle cx="160" cy="140" r="5" fill="#E8A33D" opacity="0.7"/>
+        <circle cx="300" cy="60" r="7" fill="#E8A33D"/>
+        <circle cx="300" cy="60" r="14" fill="none" stroke="#E8A33D" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILLAR I: RESEARCH ============ -->
+<section id="research" class="bg-parchment">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-20">
+    <div class="md:flex md:items-end md:justify-between mb-10">
+      <div>
+        <h2 class="font-serif text-3xl mb-2">Research &amp; Manuscript Support</h2>
+        <p class="text-muted max-w-lg">For master's and PhD candidates working through methodology, statistics, or a submission deadline.</p>
+      </div>
+    </div>
+
+    <div class="border-t border-ink/10">
+      <!-- ledger row -->
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 border-b border-ink/10 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg">Format &amp; Reference Audit</div>
+        <div class="md:col-span-5 text-sm text-muted">Journal guideline alignment, citation syncing (Zotero, Mendeley), APA/Chicago table layouts.</div>
+        <div class="md:col-span-2 text-sm text-muted">3–5 business days</div>
+        <div class="md:col-span-1 md:text-right font-medium">€29</div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 border-b border-ink/10 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg">Statistical Analysis &amp; Code</div>
+        <div class="md:col-span-5 text-sm text-muted">Data cleaning, outlier checks, R/Python/jamovi/SPSS scripts, publication-ready plots.</div>
+        <div class="md:col-span-2 text-sm text-muted">4–6 business days</div>
+        <div class="md:col-span-1 md:text-right font-medium">€75</div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 border-b border-ink/10 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg">Comprehensive Results Section</div>
+        <div class="md:col-span-5 text-sm text-muted">Full statistical run, annotated code, charts, and a written APA findings narrative.</div>
+        <div class="md:col-span-2 text-sm text-muted">5–7 business days</div>
+        <div class="md:col-span-1 md:text-right font-medium">€129</div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg text-muted">Priority Express (add-on)</div>
+        <div class="md:col-span-5 text-sm text-muted">Roughly halves the standard turnaround on any item above.</div>
+        <div class="md:col-span-2 text-sm text-muted">—</div>
+        <div class="md:col-span-1 md:text-right font-medium">+€30</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILLAR II: ADMISSIONS ============ -->
+<section id="admissions" class="bg-navy text-parchment">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-20">
+    <div class="mb-10">
+      <h2 class="font-serif text-3xl mb-2">Admissions &amp; Strategy Studio</h2>
+      <p class="text-parchment/60 max-w-lg">For bachelor's, master's, and PhD applicants. Open to all fields of study.</p>
+    </div>
+
+    <div class="border-t border-parchment/10">
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 border-b border-parchment/10 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg">Academic CV / Resume Polish</div>
+        <div class="md:col-span-5 text-sm text-parchment/60">Structural redesign, ATS keyword optimization, clarity audit.</div>
+        <div class="md:col-span-2 text-sm text-parchment/60">3–5 business days</div>
+        <div class="md:col-span-1 md:text-right font-medium">€25</div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 border-b border-parchment/10 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg">Statement of Purpose</div>
+        <div class="md:col-span-5 text-sm text-parchment/60">Tailored narrative aligned to your target program.</div>
+        <div class="md:col-span-2 text-sm text-parchment/60">5–7 business days</div>
+        <div class="md:col-span-1 md:text-right font-medium">€45</div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 border-b border-parchment/10 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg">Cover Letter</div>
+        <div class="md:col-span-5 text-sm text-parchment/60">Tailored to a specific professor, lab, or program.</div>
+        <div class="md:col-span-2 text-sm text-parchment/60">3–5 business days</div>
+        <div class="md:col-span-1 md:text-right font-medium">€22</div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg">Program &amp; Mentor Matching</div>
+        <div class="md:col-span-5 text-sm text-parchment/60">Curated shortlist of 5–10 programs or professors matching your interests, any field.</div>
+        <div class="md:col-span-2 text-sm text-parchment/60">5–7 business days</div>
+        <div class="md:col-span-1 md:text-right font-medium">€55</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILLAR III: COACHING ============ -->
+<section id="coaching" class="bg-parchment">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-20">
+    <div class="mb-10">
+      <h2 class="font-serif text-3xl mb-2">Interview &amp; Language Lab</h2>
+      <p class="text-muted max-w-lg">One-on-one virtual preparation focused on confidence, fluency, and scholarly communication.</p>
+    </div>
+
+    <div class="border-t border-ink/10">
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 border-b border-ink/10 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg">Academic Interview Simulation</div>
+        <div class="md:col-span-5 text-sm text-muted">60-minute mock interview, real-time feedback, recorded critique.</div>
+        <div class="md:col-span-2 text-sm text-muted">1-on-1</div>
+        <div class="md:col-span-1 md:text-right font-medium">€35</div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-2 md:gap-6 py-6 items-baseline">
+        <div class="md:col-span-4 font-serif text-lg">Language &amp; IELTS Mentoring Pack</div>
+        <div class="md:col-span-5 text-sm text-muted">Academic speaking, argument structuring, IELTS band prep.</div>
+        <div class="md:col-span-2 text-sm text-muted">4 × 60 min</div>
+        <div class="md:col-span-1 md:text-right font-medium">€95</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="bg-midnight text-parchment">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-20">
+    <h2 class="font-serif text-3xl mb-14">How Lantern Path works</h2>
+
+    <div class="grid md:grid-cols-3 gap-12 md:gap-6">
+      <div class="step-item relative">
+        <div class="step-line">
+          <div class="w-10 h-10 rounded-full border border-gold flex items-center justify-center font-serif text-gold mb-5">1</div>
+          <h3 class="font-medium mb-2">Submit your project</h3>
+          <p class="text-sm text-parchment/65 leading-relaxed">Select your track and share your drafts, dataset, or academic background through our encrypted intake form.</p>
+        </div>
+      </div>
+      <div class="step-item relative">
+        <div class="step-line">
+          <div class="w-10 h-10 rounded-full border border-gold flex items-center justify-center font-serif text-gold mb-5">2</div>
+          <h3 class="font-medium mb-2">Careful, human review</h3>
+          <p class="text-sm text-parchment/65 leading-relaxed">Your material is cleaned, structured, and refined by hand, then checked against your program's specific requirements.</p>
+        </div>
+      </div>
+      <div class="step-item relative">
+        <div class="w-10 h-10 rounded-full border border-gold flex items-center justify-center font-serif text-gold mb-5">3</div>
+        <h3 class="font-medium mb-2">Delivery &amp; debrief</h3>
+        <p class="text-sm text-parchment/65 leading-relaxed">Receive your final, submission-ready files, or join a live 1-on-1 call to walk through them together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUNDLES ============ -->
+<section id="bundles" class="bg-parchment">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-20">
+    <h2 class="font-serif text-3xl mb-2">Bundles &amp; pricing</h2>
+    <p class="text-muted mb-12 max-w-lg">Founding-client pricing while we build our first reviews. All packages are pay-as-you-go — no subscriptions.</p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Starter -->
+      <div class="border border-ink/15 rounded-sm p-8">
+        <h3 class="font-serif text-2xl mb-1">Starter Admission Pack</h3>
+        <p class="text-sm text-muted mb-6">À la carte value €127 — save ~30%</p>
+        <div class="font-serif text-4xl mb-6">€89</div>
+        <ul class="space-y-3 text-sm mb-8">
+          <li class="flex gap-2"><span class="text-gold">—</span> Academic CV Polish</li>
+          <li class="flex gap-2"><span class="text-gold">—</span> Statement of Purpose</li>
+          <li class="flex gap-2"><span class="text-gold">—</span> Cover Letter</li>
+          <li class="flex gap-2"><span class="text-gold">—</span> Mock Interview Simulation</li>
+        </ul>
+        <!-- TODO: replace href with your Stripe Payment Link for the Starter Admission Pack (Step 3) -->
+        <a href="#" class="block text-center border border-ink/30 py-3 rounded-sm hover:border-ink transition-colors">
+          Get the Starter Pack
+        </a>
+      </div>
+
+      <!-- Full Journey (recommended) -->
+      <div class="border-2 border-gold rounded-sm p-8 bg-midnight text-parchment relative">
+        <span class="absolute -top-3 left-8 bg-gold text-midnight text-xs font-medium px-3 py-1 rounded-full">Recommended</span>
+        <h3 class="font-serif text-2xl mb-1">Full Journey Mentoring</h3>
+        <p class="text-sm text-parchment/60 mb-6">À la carte value €239 — save ~21%</p>
+        <div class="font-serif text-4xl mb-6">€189</div>
+        <ul class="space-y-3 text-sm mb-8 text-parchment/85">
+          <li class="flex gap-2"><span class="text-gold">—</span> Program &amp; Mentor Matching (10 matches)</li>
+          <li class="flex gap-2"><span class="text-gold">—</span> Academic CV Polish</li>
+          <li class="flex gap-2"><span class="text-gold">—</span> Statement of Purpose</li>
+          <li class="flex gap-2"><span class="text-gold">—</span> 2 Cover Letters</li>
+          <li class="flex gap-2"><span class="text-gold">—</span> 2 Interview Prep Sessions</li>
+          <li class="flex gap-2"><span class="text-gold">—</span> WhatsApp support, up to 6 weeks or 15 messages</li>
+        </ul>
+        <!-- TODO: replace href with your Stripe Payment Link for Full Journey Mentoring (Step 3) -->
+        <a href="#" class="block text-center bg-gold text-midnight font-medium py-3 rounded-sm hover:bg-gold/90 transition-colors">
+          Start my journey
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRITY ============ -->
+<section class="bg-navy text-parchment">
+  <div class="max-w-3xl mx-auto px-6 md:px-10 py-20 text-center">
+    <h2 class="font-serif text-2xl mb-6">Our academic integrity commitment</h2>
+    <p class="text-parchment/75 leading-relaxed">
+      Lantern Path operates strictly within academic integrity guidelines. We do not ghostwrite
+      dissertations or forge experimental data. We provide technical execution, statistical code
+      support, manuscript formatting, admissions storytelling guidance, and language coaching —
+      the research and the story remain entirely your own.
+    </p>
+  </div>
+</section>
+
+<!-- ============ INTAKE / CTA ============ -->
+<section id="intake" class="bg-parchment">
+  <div class="max-w-2xl mx-auto px-6 md:px-10 py-20 text-center">
+    <h2 class="font-serif text-3xl mb-4">Tell us about your project</h2>
+    <p class="text-muted mb-8">A short form, usually a reply within one business day.</p>
+    <!-- TODO: replace with your embedded or linked intake form (e.g. a free Tally or Typeform) -->
+    <a href="#" class="inline-block bg-ink text-parchment font-medium px-8 py-3 rounded-sm hover:bg-ink/90 transition-colors">
+      Get a free estimate
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-midnight text-parchment/60 text-sm">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-12 flex flex-col md:flex-row md:justify-between gap-6">
+    <div>
+      <div class="font-serif text-parchment text-lg mb-2">Lantern Path</div>
+      <p>Illuminating the route to international academic success.</p>
+      <p class="mt-1">Based in Europe, working with students worldwide.</p>
+    </div>
+    <div class="flex flex-col gap-1">
+      <a href="mailto:contact@lanternpath.io" class="hover:text-parchment transition-colors">contact@lanternpath.io</a>
+      <a href="#" class="hover:text-parchment transition-colors">Privacy Policy</a>
+      <a href="#" class="hover:text-parchment transition-colors">Academic Integrity Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>
+
+</body>
+</html>
